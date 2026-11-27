@@ -1,124 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NAU Matcha — Coming soon to Lisbon</title>
-<meta name="description" content="NAU Matcha is a new matcha bar and Japanese matcha supplier in Lisbon, Portugal. Opening in 2027.">
-<meta property="og:title" content="NAU Matcha — Coming soon to Lisbon">
-<meta property="og:description" content="A new matcha bar and Japanese matcha supplier in Lisbon, Portugal. Opening in 2027.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233F6B3A'/%3E%3Cpath d='M31 13 L31 39 L47 39 Z' fill='%23F7F4EC'/%3E%3Cpath d='M27 18 L27 39 L18 39 Z' fill='%23F7F4EC'/%3E%3C/svg%3E">
+<title>NAU Matcha</title>
+<meta name="description" content="NAU Matcha — a new matcha bar brand from Lisbon. First bar opens May 2027. Website coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #F7F4EC;
-    --ink: #1F2420;
-    --muted: #5B625C;
-    --green: #3F6B3A;
-    --line: #DAD6CB;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  .page {
-    min-height: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 24px 32px;
-    display: flex;
-    flex-direction: column;
-  }
-  header { display: flex; align-items: center; gap: 14px; }
-  .mark { width: 44px; height: 44px; flex: none; }
-  .wordmark { line-height: 1; }
-  .wordmark b { display: block; font-size: 22px; letter-spacing: 0.32em; font-weight: 700; }
-  .wordmark span { display: block; margin-top: 5px; font-size: 11px; letter-spacing: 0.3em; color: var(--green); font-weight: 600; }
-
-  main { flex: 1; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: center; padding: 40px 0 40px; }
-  .photo { margin: 0; }
-  .photo img { display: block; width: 100%; aspect-ratio: 4 / 5; max-height: 68vh; object-fit: cover; object-position: center 70%; border-radius: 6px; background: #DDE5D6; }
-  .photo figcaption { margin-top: 8px; font-size: 11px; color: var(--muted); }
-  .photo figcaption a { color: var(--muted); }
-  .eyebrow { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); font-weight: 600; }
-  h1 { margin-top: 18px; font-size: clamp(40px, 5vw, 64px); line-height: 0.98; letter-spacing: -0.02em; font-weight: 700; }
-  h1 em { font-style: normal; color: var(--green); }
-  .lead { margin-top: 28px; max-width: 560px; font-size: 19px; color: var(--muted); }
-  .pt { margin-top: 10px; max-width: 560px; font-size: 15px; color: var(--muted); font-style: italic; }
-
-  .bowl { margin-top: 48px; width: 120px; height: 2px; background: var(--green); border-radius: 2px; }
-
-  footer {
-    border-top: 1px solid var(--line);
-    padding-top: 24px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    font-size: 14px;
-  }
-  footer h2 { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 6px; }
-  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
-  footer a:hover { border-color: var(--green); color: var(--green); }
-  .copy { margin-top: 28px; font-size: 12px; color: var(--muted); }
-
-  @media (max-width: 640px) {
-    .page { padding: 24px 16px 24px; }
-    main { grid-template-columns: 1fr; gap: 36px; padding: 40px 0 36px; }
-    .photo img { aspect-ratio: 1 / 1; object-position: center 62%; }
-    .lead { font-size: 17px; }
-    footer { grid-template-columns: 1fr; gap: 16px; }
-  }
+/* VOICE: calm, fresh, Japanese-minimal; a small brand saying hello
+   IDEA: the label of a matcha tin — cream paper, one green seal
+   PICTURE: a chawan seen from above-side, frothy matcha, bamboo whisk
+   COLOUR and TYPE: cream paper, deep tea green, bright matcha accent; Inter Tight + Inter
+   LAYOUT: hero with bowl, three pillars, partners band in green, timeline, contact footer */
+:root{color-scheme:light dark;
+  --bg:light-dark(#f5f2ea,#141a13);
+  --card:light-dark(#ffffff,#1d251b);
+  --ink:light-dark(#1f2a1c,#eef0e6);
+  --mute:light-dark(#5d665a,#a9b2a3);
+  --green:light-dark(#3f6f3a,#7fae5c);
+  --deep:light-dark(#2f5a2b,#22361f);
+  --matcha:#9bc44a;
+  --line:light-dark(#dcd8cc,#2e3a2b)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3,.logo{font-family:"Inter Tight",Inter,system-ui,sans-serif}
+a{color:inherit}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.wrap{max-width:1180px;margin:0 auto}
+header.band{padding-block:22px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;text-decoration:none}
+.logo i{width:26px;height:26px;border-radius:50%;background:var(--green);display:block}
+.pill{font-size:14px;font-weight:500;padding:6px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--mute);white-space:nowrap}
+.pill b{color:var(--green);font-weight:600}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-top:clamp(12px,3vw,40px)}
+.where{color:var(--green);font-weight:600;font-size:15px;margin:0 0 14px}
+h1{font-size:clamp(36px,5.4vw,60px);line-height:1.04;margin:0 0 20px;text-wrap:balance;letter-spacing:-.02em}
+.lead{font-size:17px;color:var(--mute);max-width:34em;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:99px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.main{background:var(--green);color:#fff}
+.btn.ghost{border:1.5px solid var(--green);color:var(--green)}
+.btn:focus-visible{outline:3px solid var(--matcha);outline-offset:3px}
+.fig{position:relative;aspect-ratio:10/9}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.foam{transform-origin:200px 170px;animation:swirl 14s linear infinite}
+@keyframes swirl{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.foam{animation:none}}
+h2{font-size:clamp(28px,3.4vw,38px);line-height:1.1;margin:0 0 24px;text-wrap:balance;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:var(--card);border-radius:18px;padding:26px 24px;border:1px solid var(--line)}
+.card h3{font-size:20px;margin:14px 0 8px}
+.card p{margin:0;color:var(--mute);font-size:15.5px}
+.ic{width:40px;height:40px}
+.partners{background:var(--deep);color:#f2f4ea}
+.partners .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px)}
+.partners p{color:#cfdcc4;margin:0 0 18px;max-width:32em}
+.partners ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.partners li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.partners li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--matcha);margin-top:8px}
+.partners a{color:#fff}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;position:relative}
+.tl li{border-top:3px solid var(--line);padding-top:16px;position:relative}
+.tl li::before{content:"";position:absolute;top:-9px;left:0;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--green)}
+.tl li.big::before{background:var(--green)}
+.tl b{display:block;color:var(--green);font-family:"Inter Tight",sans-serif;font-size:18px;white-space:nowrap}
+.tl span{color:var(--mute);font-size:15.5px}
+footer{border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.foot h3{margin:0 0 4px;font-size:20px}
+.foot p{margin:0;color:var(--mute);font-size:15px}
+.contacts{display:grid;gap:4px;text-align:right;font-size:15.5px}
+.contacts a{text-decoration:none;border-bottom:1px solid var(--line)}
+.small{font-size:13px;color:var(--mute);margin-top:28px}
+@media(max-width:860px){
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .partners .grid{grid-template-columns:minmax(0,1fr)}
+  .tl{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}}
+@media(max-width:600px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .fig{max-width:400px;width:100%;margin:0 auto}
+  .contacts{text-align:left}
+  .tl{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
-<div class="page">
-  <header>
-    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" fill="#3F6B3A"/>
-      <path d="M31 13 L31 39 L47 39 Z" fill="#F7F4EC"/>
-      <path d="M27 18 L27 39 L18 39 Z" fill="#F7F4EC" opacity="0.7"/>
-      <path d="M13 46 q4.75 -4 9.5 0 t9.5 0 t9.5 0 t9.5 0" stroke="#F7F4EC" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+<header class="band"><div class="wrap top">
+  <a class="logo" href="#"><i></i>NAU Matcha</a>
+  <span class="pill"><b>Website coming soon</b> · Lisbon, Portugal</span>
+</div></header>
+
+<section class="band" style="padding-top:0"><div class="wrap hero">
+  <div>
+    <p class="where">A new matcha brand from Lisbon</p>
+    <h1>Our first matcha bar opens in Lisbon in May 2027</h1>
+    <p class="lead">Matcha lattes and fruit matcha drinks made with Japanese matcha that is smooth, bright and low in bitterness. Our full website is on its way. Until then, write to us directly.</p>
+    <div class="cta">
+      <a class="btn main" href="mailto:e.larin29@gmail.com">Email us</a>
+      <a class="btn ghost" href="https://wa.me/351915836709" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="fig" aria-hidden="true">
+    <svg viewBox="0 0 400 360">
+      <defs>
+        <radialGradient id="tea" cx="45%" cy="40%" r="65%">
+          <stop offset="0" stop-color="#c3e07a"/><stop offset=".55" stop-color="#9bc44a"/><stop offset="1" stop-color="#5f8f2e"/>
+        </radialGradient>
+        <linearGradient id="bowl" x1="0" x2="1">
+          <stop offset="0" stop-color="#2f3a2c"/><stop offset=".45" stop-color="#55634f"/><stop offset="1" stop-color="#232c21"/>
+        </linearGradient>
+        <linearGradient id="bamboo" x1="0" x2="1">
+          <stop offset="0" stop-color="#d9c08a"/><stop offset="1" stop-color="#b3965c"/>
+        </linearGradient>
+        <clipPath id="surf"><ellipse cx="200" cy="170" rx="128" ry="46"/></clipPath>
+      </defs>
+      <circle cx="210" cy="175" r="165" fill="var(--green)" opacity=".14"/>
+      <ellipse cx="205" cy="318" rx="150" ry="22" fill="#000" opacity=".12"/>
+      <path d="M58 170 C62 270 120 318 200 318 C280 318 338 270 342 170 Z" fill="url(#bowl)"/>
+      <path d="M150 312 C170 318 230 318 250 312 L246 326 C230 331 170 331 154 326 Z" fill="#232c21"/>
+      <path d="M80 200 C95 255 130 288 170 300" stroke="#fff" stroke-opacity=".14" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <ellipse cx="200" cy="170" rx="142" ry="54" fill="#e9e2d0"/>
+      <ellipse cx="200" cy="170" rx="132" ry="48" fill="#3d4a38"/>
+      <ellipse cx="200" cy="170" rx="128" ry="46" fill="url(#tea)"/>
+      <g clip-path="url(#surf)"><g class="foam" fill="#e6f2c4" opacity=".7">
+        <circle cx="150" cy="160" r="5"/><circle cx="175" cy="182" r="3.5"/><circle cx="214" cy="152" r="4.5"/>
+        <circle cx="240" cy="178" r="3"/><circle cx="262" cy="160" r="5"/><circle cx="190" cy="196" r="4"/>
+        <circle cx="128" cy="178" r="3"/><circle cx="226" cy="196" r="3.5"/><circle cx="286" cy="182" r="3"/>
+        <circle cx="200" cy="140" r="3"/><circle cx="160" cy="140" r="2.5"/><circle cx="250" cy="140" r="2.5"/>
+      </g></g>
+      <ellipse cx="185" cy="158" rx="58" ry="14" fill="#fff" opacity=".18"/>
+      <g transform="rotate(24 330 120)">
+        <rect x="318" y="8" width="22" height="96" rx="9" fill="url(#bamboo)"/>
+        <rect x="318" y="58" width="22" height="5" fill="#9c8150"/>
+        <path d="M312 104 C300 150 304 180 329 192 C354 180 358 150 346 104 Z" fill="#e8d7ab"/>
+        <g stroke="#c9b27a" stroke-width="1.6" fill="none">
+          <path d="M318 108 C310 150 314 175 329 188"/><path d="M324 108 C320 150 322 176 329 188"/>
+          <path d="M334 108 C338 150 336 176 329 188"/><path d="M340 108 C348 150 344 175 329 188"/>
+        </g>
+      </g>
     </svg>
-    <div class="wordmark" aria-label="NAU Matcha">
-      <b>NAU</b>
-      <span>MATCHA · LISBOA</span>
-    </div>
-  </header>
+  </div>
+</div></section>
 
-  <main>
-    <div>
-      <p class="eyebrow">Coming soon · 2027</p>
-      <h1>Japanese matcha,<br><em>arriving in Lisbon.</em></h1>
-      <p class="lead">NAU Matcha is a new matcha bar and matcha supplier in Lisbon. We work directly with tea producers in Japan and open our first location in spring 2027.</p>
-      <p class="pt">Em breve em Lisboa — matcha japonês, diretamente dos produtores.</p>
-      <div class="bowl" aria-hidden="true"></div>
+<section class="band"><div class="wrap">
+  <h2>What NAU Matcha will be</h2>
+  <div class="cards">
+    <div class="card">
+      <svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="var(--green)" opacity=".15"/><path d="M12 15h16l-2 15h-12z" fill="var(--green)"/><rect x="11" y="12" width="18" height="4" rx="2" fill="var(--green)"/></svg>
+      <h3>Matcha bars</h3>
+      <p>Takeaway corners in malls and next to Pilates and yoga studios. First location in Lisbon, then a chain across Lisbon and other European cities.</p>
     </div>
-    <figure class="photo">
-      <img src="https://images.unsplash.com/photo-1631308491952-040f80133535?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="Matcha poured over an iced latte" width="1100" height="1375">
-      <figcaption>Photo: <a href="https://unsplash.com/@uynnha">Helen Van</a> / <a href="https://unsplash.com/photos/a-pitcher-pouring-green-liquid-into-a-glass-uFAVbEbsOIM">Unsplash</a></figcaption>
-    </figure>
-  </main>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="var(--green)" opacity=".15"/><path d="M11 20a9 6 0 0 0 18 0z" fill="var(--green)"/><path d="M29 20h3a3 3 0 0 1 0 6h-4" stroke="var(--green)" stroke-width="2" fill="none"/><path d="M15 12c0 2 2 2 2 4M21 12c0 2 2 2 2 4" stroke="var(--green)" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <h3>B2B supply</h3>
+      <p>Latte and ceremonial matcha, recipes and barista training for specialty cafés and Japanese restaurants in Portugal.</p>
+    </div>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="var(--green)" opacity=".15"/><rect x="13" y="13" width="14" height="17" rx="2" fill="var(--green)"/><rect x="12" y="10" width="16" height="4" rx="1.5" fill="var(--green)"/><circle cx="20" cy="22" r="3" fill="var(--bg)"/></svg>
+      <h3>Own brand</h3>
+      <p>Private-label matcha tins and an online shop for matcha, tea and teaware.</p>
+    </div>
+  </div>
+</div></section>
 
-  <footer>
+<section class="band partners"><div class="wrap grid">
+  <div>
+    <h2 style="color:#fff">Tea producers in Japan: let's talk</h2>
+    <p>We are looking for a long-term Japanese matcha partner for latte-grade and ceremonial matcha, private-label tins and hojicha.</p>
+    <p>Write to <a href="mailto:e.larin29@gmail.com">e.larin29@gmail.com</a></p>
+  </div>
+  <ul>
+    <li>Taste first: low bitterness, clear umami, bright colour in milk</li>
+    <li>The same taste from batch to batch</li>
+    <li>Traceable origin: region, cultivar, harvest and grinding date</li>
+    <li>EU documents for every batch: CoA, pesticide tests against EU limits, certificate of origin</li>
+    <li>Air shipping to Lisbon in nitrogen-flushed packaging</li>
+  </ul>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>Timeline</h2>
+  <ol class="tl">
+    <li><b>Nov–Dec 2026</b><span>Tastings in Japan and samples</span></li>
+    <li><b>Q1 2027</b><span>Supplier choice, test order and recipes</span></li>
+    <li class="big"><b>May 2027</b><span>First matcha bar opens in Lisbon</span></li>
+    <li><b>2027–2028</b><span>B2B in Portugal, new locations, other EU cities</span></li>
+  </ol>
+</div></section>
+
+<footer class="band"><div class="wrap">
+  <div class="foot">
     <div>
-      <h2>Contact</h2>
+      <h3>Evgenii Larin</h3>
+      <p>Founder, NAU Matcha · Lisbon, Portugal</p>
+    </div>
+    <div class="contacts">
       <a href="mailto:e.larin29@gmail.com">e.larin29@gmail.com</a>
+      <a href="https://wa.me/351915836709" target="_blank" rel="noopener">+351 915 836 709 (WhatsApp)</a>
     </div>
-    <div>
-      <h2>Phone / WhatsApp</h2>
-      <a href="tel:+351915836709">+351 915 836 709</a><br>
-      <a href="tel:+79166371456">+7 916 637 1456</a>
-    </div>
-    <div>
-      <h2>Address</h2>
-      Rua Timor 75<br>Parede, Portugal
-    </div>
-  </footer>
-  <p class="copy">© 2026 NAU Matcha · Evgenii Larin, founder</p>
-</div>
+  </div>
+  <p class="small">© 2026 NAU Matcha. Full website coming soon.</p>
+</div></footer>
+
 </body>
 </html>
